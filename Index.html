@@ -1,105 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I'm Sorry my jaan❤️</title>
-<!-- Google Fonts for a clean, heartfelt aesthetic -->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-<style>
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry my jaan❤️</title>
+    <!-- Google Fonts for a clean, heartfelt aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-font-family: 'Quicksand', sans-serif;
-background: radial-gradient(circle at center, #101525 0%, #050811 100%);
-color: #fff;
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-position: relative;
-}
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: radial-gradient(circle at center, #101525 0%, #050811 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
 
-/* Twinkling Star Background */
-.stars {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
-background-size: 550px 550px, 350px 350px, 250px 250px;
-background-position: 0 0, 40px 60px, 130px 270px;
-opacity: 0.4;
-}
+        /* Twinkling Star Background */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            opacity: 0.4;
+        }
 
-/* Decorative Elements */
-.moon {
-position: absolute;
-top: 40px;
-right: 40px;
-width: 40px;
-height: 40px;
-background: #fffde8;
-border-radius: 50%;
-box-shadow: 0 0 20px #fffa85;
-opacity: 0.6;
-}
+        /* Decorative Elements */
+        .moon {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 40px;
+            height: 40px;
+            background: #fffde8;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fffa85;
+            opacity: 0.6;
+        }
 
-/* Card container standard sizes */
-.container {
-width: 100%;
-max-width: 420px;
-padding: 25px;
-text-align: center;
-z-index: 10;
-max-height: 90vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+        /* Card container standard sizes */
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 25px;
+            text-align: center;
+            z-index: 10;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.card {
-background: rgba(255, 255, 255, 0.04);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.08);
-border-radius: 24px;
-padding: 35px 25px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-display: none; /* Controlled by JS */
-flex-direction: column;
-align-items: center;
-animation: fadeIn 0.6s ease-out forwards;
-width: 100%;
-max-height: 85vh;
-}
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            display: none; /* Controlled by JS */
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.6s ease-out forwards;
+            width: 100%;
+            max-height: 85vh;
+        }
 
-.card.active {
-display: flex;
-}
+        .card.active {
+            display: flex;
+        }
 
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-/* Image/GIF sizing rules */
-.gif-display {
-width: 140px;
-height: 140px;
-margin-bottom: 20px;
-object-fit: contain;
-flex-shrink: 0;
+        /* Image/GIF sizing rules */
+        .gif-display {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        /* Typography */
+        h1, .letter-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #ff8fa3;
+            margin-bottom: 15px;
+            flex-shrink: 0;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #e0e6ed;
+            margin-bottom: 25px;
+            white-space: pre-line;
+        }
+
+        /* Specifically optimized long text box for Step 5 */
+        .long-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e0e6ed;
+            margin-bottom: 25px;
+            white-space: pre-line;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 250px;
+            padding-right: 8px;
+            width: 100%;
+        }
+
+        /* Simple Custom Scrollbar style for the text box */
+        .long-text::-webkit-scrollbar {
+            width: 4px;
+        }
+        .long-text::-webkit-scrollbar-thumb {
+            background: rgba(255, 117, 140, 0.4);
+            border-radius: 10px;
+        }
+
+        /* Button styling */
+        button {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            border: none;
+            color: white;
+            padding: 14px 32px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+            transition: all 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+            flex-shrink: 0;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        /* Photo Album Look for Step 3 */
+        .photo-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 10px 10px 25px 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            transform: rotate(-2deg);
+            border-radius: 2px;
+            transition: transform 0.3s;
+        }
+
+        .polaroid:nth-child(even) {
+            transform: rotate(3deg);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Floating Hearts / Flowers Container */
+        .particles-container {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 11;
+        }
+
+        .particle {
+            position: absolute;
+            animation: floatUp 4s linear forwards;
+            opacity: 0.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="moon"></div>
+    <div class="particles-container" id="particleContainer"></div>
+
+    <div class="container">
+
+        <!-- STEP 1: Intro -->
+        <div class="card active" id="step1">
+            <img class="gif-display" src="https://media.tenor.com/28g3_qE19sMAAAAi/mocha-sad.gif" alt="Cute sad bear walking">
+            <p>Sorry my jaan... I can't see you sad my baby...
+
+            I'm feeling very bad that i hurt you my jaan... please forgive me...</p>
+            <button onclick="nextStep(2)">Let me talk...</button>
+        </div>
+
+        <!-- STEP 2: The Apology Setup -->
+        <div class="card" id="step2">
+            <h1 class="letter-title">My Sorry Letter to You...</h1>
+            <img class="gif-display" src="https://media.tenor.com/W2M1Ssz2N20AAAAi/tkthao219-bubududu.gif" alt="Thinking bear">
+            <p>Ha mante haii meri glti haii jb bhi bat krne jate hai behas ho jata haii wo bhi mere karan...</p>
+            <button onclick="nextStep(3)">Continue reading...</button>
+        </div>
+
+        <!-- STEP 3: The Confession -->
+        <div class="card" id="step3">
+            <img class="gif-display" src="https://media.tenor.com/lM_sW3jQo6QAAAAi/sad-cute.gif" alt="Poking bear trying to make up">
+            <p>I know I hurt you...
+            You desrve all world 🌎 my love.</p>
+
+            <div class="photo-stack">
+                <div class="polaroid">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop" alt="Memory 1">
+                </div>
+            </div>
+
+            <p style="font-size: 0.95rem;">I've been staring at your beautiful picture all night... 🌙
+
+            Tum dil ki bahut achi ho, I don't want to hurt you... I'm so sorry. 💔
+
+            I promise i will not do this again my kuchupuchuu. ✨✨</p>
+
+            <button onclick="nextStep(4)">I need you...</button>
+        </div>
+
+        <!-- STEP 4: The Hug Request -->
+        <div class="card" id="step4">
+            <img class="gif-display" src="https://media.tenor.com/Hg59vG91mDEAAAAi/love-hug.gif" alt="Bears hugging">
+            <p>Meri jaan tum aise udas rhti hoo to bilkul nhi acha lgta haii ...
+
+            Tum khus rahoo baby tumko khus dekh kr humko bhi khusi hoti haii. 💕💕</p>
+            <button onclick="nextStep(5)">Send a hug</button>
+        </div>
+
+        <!-- STEP 5: Final Flower & Long Promise Paragraph -->
+        <div class="card" id="step5">
+            <h1 class="letter-title">I WILL NEVER LEAVE YOU MY JAAN🌹🌹</h1>
+            <img class="gif-display" src="https://media.tenor.com/g0t64M8q23kAAAAi/bubu-dudu-bubu.gif" alt="Bear giving flower">
+
+            <div class="long-text">I love you more than you think my bacha. 
+            Mere liye tum hi duniya tumahre alwa mere pas koi nhi haii na hi cahiye humko.
+            Humko bs tum cahiye meri pragati or mai pragti ka banda.💜
+            
+            Ha jante hai hum larte haii tumse per kbhi bura nhi cahe hum tumhara na bolege gusse me bol dete haii uske liye sorry jaan🥹.
+            Ab humko ye to nhi pta ki ye tumko kaisa lagega per umid krte haii acha lage or ha ager bura lage to bta dena hum phir kuch or krege.😍
+
+            You mean everything to me you are my world 🌎 i just can't live whiout you. I love you meri jaan traun se bhi jayada lamba.😍❤️💕🐻✨</div>
+
+            <button onclick="burstHearts()">Please Forgive Me? ❤️</button>
+        </div>
+
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.getElementById('step' + stepNumber).classList.add('active');
+
+            if(stepNumber === 4) spawnParticles('💖', 15);
+            if(stepNumber === 5) spawnParticles('🌹', 15);
+        }
+
+        function spawnParticles(symbol, count) {
+            const container = document.getElementById('particleContainer');
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.textContent = symbol;
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                particle.style.animationDelay = (Math.random() * 2) + 's';
+                particle.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+                container.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 5000);
+            }
+        }
+
+        function burstHearts() {
+            spawnParticles('❤️', 30);
+            spawnParticles('✨', 20);
+            alert("Thank you... I love you! ❤️");
+        }
+    </script>
+</body>
+</html>
 }
 
 /* Typography */
